@@ -1,150 +1,147 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .carousel {
-    height: 600px !important;
+  height: 600px !important;
 }
 
 .carousel-inner img {
-    height: 600px !important;
-    margin: 0 auto;
+  height: 600px !important;
+  width: 100%;
+  object-fit: cover;
+  margin: 0 auto;
 }
 
 .carousel-indicators li {
-    border-color: #000;
+  border-color: #000;
 }
 
 .carousel-indicators .active {
-    background-color: #000;
+  background-color: #000;
 }
 
 .about {
-    background-color: #007DA5;
-    height: 350px;
+  background-color: #007da5;
+  height: 350px;
 }
 
 .details {
-    display: grid;
-    align-items: center;
-    height: 100%;
-    grid-template-columns: 1fr 2fr;
+  display: grid;
+  align-items: center;
+  height: 100%;
+  grid-template-columns: 1fr 2fr;
 }
 
 .details h5 {
-    color: aqua;
+  color: aqua;
 }
 
 #about {
-    padding: 2%;
+  padding: 2%;
 }
 
 .slot {
-    background-color: #E5F3FF;
-    padding: 4px 10px 6px 10px;
-    display: grid;
-    height: 40px;
-    grid-template-columns: 1fr 4fr;
-    justify-items: flex-start;
-    align-items: center;
+  background-color: #e5f3ff;
+  padding: 4px 10px 6px 10px;
+  display: grid;
+  height: 40px;
+  grid-template-columns: 1fr 4fr;
+  justify-items: flex-start;
+  align-items: center;
 }
 
 .slot img {
-    height: 2rem;
-    padding-bottom: 6px;
+  height: 2rem;
+  padding-bottom: 6px;
 }
 
 .slot p {
-    color: #64b7ff;
+  color: #64b7ff;
 }
 
 .form {
-    background:
-        linear-gradient(rgba(90, 192, 255, 0.45),
-            rgba(0, 132, 255, 0.45)),
-        url(back.webp);
-    height: calc(100vh - 82px);
+  background: linear-gradient(rgba(90, 192, 255, 0.45), rgba(0, 132, 255, 0.45)),
+    url(back.webp);
+  height: calc(100vh - 82px);
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .contents {
-    background-color:#fff ;
+  background-color: #fff;
 
-    width: 50%;
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    height: 410px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-radius: 20px;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  height: 410px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 20px;
 }
-.content{
-    background-color: #272a38;
-    border-radius: 20px;
-    padding: 20px 14px;
+.content {
+  background-color: #272a38;
+  border-radius: 20px;
+  padding: 20px 14px;
 }
-.content h1{
-    color: #fff;
-    font-size: 1.8em;
+.content h1 {
+  color: #fff;
+  font-size: 1.8em;
 }
-.content p{
-    color: #98a3b2;
-    font-size: 0.8em;
+.content p {
+  color: #98a3b2;
+  font-size: 0.8em;
 }
-.content a{
-    font-size: 0.8rem;
-    margin-left: 0;
+.content a {
+  font-size: 0.8rem;
+  margin-left: 0;
 }
-form>div {
-    position: relative;
-}
-
-form>div>label {
-    position: absolute;
-    top: 25%;
-    left: 30%;
-    right: 0;
-    color: #747d8e;
-}
-form>div>input{
-    padding: 12px 8px;
-    width: 100%;
-    background-color: #3d404b;
-    border: none;
-    border-radius: 20px;
-    margin: 6px 0;
-}
-form>div>input:focus + label {
-    top: 0%;
-    left: 0%;
-    margin-left: 8px;
-    margin-top: 6px;
-    margin-bottom: 4px;
-    color: #b1bbd2e8;
-    font-size: 0.8rem;
-    transition: 0.2s;
-}
-form>div>input:focus{
-    box-shadow: none;
-    outline: none;
-    border: 1px solid #64b7ff;
-    color: #fff;
-    padding: 16px 8px;
+form > div {
+  position: relative;
 }
 
-@media (max-width:980px){
-    .contents{
-        grid-template-columns: 1fr;
-    
-    }
-    .content-text{
-        display: none;
-        
-    }
+form > div > label {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  right: 0;
+  color: #747d8e;
+}
+form > div > input {
+  padding: 12px 8px;
+  width: 100%;
+  background-color: #3d404b;
+  border: none;
+  border-radius: 20px;
+  margin: 6px 0;
+}
+form > div > input:focus + label {
+  top: 0%;
+  left: 0%;
+  margin-left: 8px;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  color: #b1bbd2e8;
+  font-size: 0.8rem;
+  transition: 0.2s;
+}
+form > div > input:focus {
+  box-shadow: none;
+  outline: none;
+  border: 1px solid #64b7ff;
+  color: #fff;
+  padding: 16px 8px;
+}
+
+@media (max-width: 980px) {
+  .contents {
+    grid-template-columns: 1fr;
+  }
+  .content-text {
+    display: none;
+  }
 }

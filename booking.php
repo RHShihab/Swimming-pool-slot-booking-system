@@ -40,135 +40,128 @@
     </nav>
     <section>
         <div class="book-slot text-center">
-            <div class="form-check row row-cols-1 row-cols-md-3 g4" id="slot">
-                <input class="btn-check" type="radio" name="Morning" id="flexRadioDefault1">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault1">
+
+            <div class="form-check row row-cols-1 row-cols-md-3 g4" id="slot-list">
+                <input class="btn-check slot" type="radio" name="Slot" id="Morning">
+                <label class=" btn btn-outline-primary" for="Morning">
                     Morning Slot
                 </label>
-                <input class="btn-check" type="radio" name="Afternoon" id="flexRadioDefault2">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault2">
+                <input class="btn-check slot" type="radio" name="Slot" id="Afternoon">
+                <label class=" btn btn-outline-primary" for="Afternoon">
                     Afternoon Slot
                 </label>
-                <input class="btn-check" type="radio" name="Evening" id="flexRadioDefault3">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault3">
+                <input class="btn-check slot" type="radio" name="Slot" id="Evening">
+                <label class=" btn btn-outline-primary" for="Evening">
                     Evening Slot
                 </label>
             </div>
-            <script>
-                var slot = document.getElementById('#slot');
-                console.log(slot);
-            </script>
-            <div class="form-check row row-cols-1 row-cols-md-4 g-4">
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault1">
-                    6:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault2">
-                    7:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault3">
-                    8:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault4">
-                    9:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault5">
-                    10:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault6">
-                    11:00
-                </label>
-            </div>
-            <h1>Morning Slot</h1>
-            <div class="form-check row row-cols-1 row-cols-md-4 g-4">
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault1">
-                    6:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault2">
-                    7:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault3">
-                    8:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault4">
-                    9:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault5">
-                    10:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault6">
-                    11:00
-                </label>
-            </div>
-            <h1>Morning Slot</h1>
-            <div class="form-check row row-cols-1 row-cols-md-4 g-4">
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault1">
-                    6:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault2">
-                    7:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault3">
-                    8:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault4">
-                    9:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault5">
-                    10:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault6">
-                    11:00
-                </label>
-            </div>
-         
-            <div class="form-check row row-cols-1 row-cols-md-4 g-4">
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault1">
-                    6:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault2">
-                    7:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault3">
-                    8:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault4">
-                    9:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault5">
-                    10:00
-                </label>
-                <input class="btn-check" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
-                <label class=" btn btn-outline-primary" for="flexRadioDefault6">
-                    11:00
-                </label>
+
+            <div class="slot-group d-none" id="Morning-slot">
+                <h1>Morning Slot</h1>
+                <div class="form-check row row-cols-1 row-cols-md-4 g-4">
+                    <input class="btn-check" type="radio" name="time" id="morning6">
+                    <label class=" btn btn-outline-primary" for="morning6">
+                        6:00
+                    </label>
+                    <input class="btn-check" type="radio" name="time" id="morning7">
+                    <label class=" btn btn-outline-primary" for="morning7">
+                        7:00
+                    </label>
+                    <input class="btn-check" type="radio" name="time" id="morning8">
+                    <label class=" btn btn-outline-primary" for="morning8">
+                        8:00
+                    </label>
+                    <input class="btn-check" type="radio" name="time" id="morning9">
+                    <label class=" btn btn-outline-primary" for="morning9">
+                        9:00
+                    </label>
+                    <input class="btn-check" type="radio" name="time" id="morning10">
+                    <label class=" btn btn-outline-primary" for="morning10">
+                        10:00
+                    </label>
+                    <input class="btn-check" type="radio" name="time" id="morning11">
+                    <label class=" btn btn-outline-primary" for="morning11">
+                        11:00
+                    </label>
+                </div>
             </div>
 
+            <div class="slot-group d-none" id="Afternoon-slot">
+                <h1>Afternoon Slot</h1>
+                <div class="form-check row row-cols-1 row-cols-md-4 g-4">
+                    <input class="btn-check" type="radio" name="time" id="afternoon1">
+                    <label class=" btn btn-outline-primary" for="afternoon1">
+                        1:00
+                    </label>
+                    <input class="btn-check" type="radio" name="time" id="afternoon2">
+                    <label class=" btn btn-outline-primary" for="afternoon2">
+                        2:00
+                    </label>
+                    <input class="btn-check" type="radio" name="time" id="afternoon3">
+                    <label class=" btn btn-outline-primary" for="afternoon3">
+                        3:00
+                    </label>
+                    <input class="btn-check" type="radio" name="time" id="afternoon4">
+                    <label class=" btn btn-outline-primary" for="afternoon4">
+                        4:00
+                    </label>
+                    <input class="btn-check" type="radio" name="time" id="afternoon5">
+                    <label class=" btn btn-outline-primary" for="afternoon5">
+                        5:00
+                    </label>
+                </div>
+            </div>
+
+            <div class="slot-group d-none" id="Evening-slot">
+                <h1>Evening Slot</h1>
+                <div class="form-check row row-cols-1 row-cols-md-4 g-4">
+                    <input class="btn-check" type="radio" name="time" id="evening6">
+                    <label class=" btn btn-outline-primary" for="evening6">
+                        6:00
+                    </label>
+                    <input class="btn-check" type="radio" name="time" id="evening7">
+                    <label class=" btn btn-outline-primary" for="evening7">
+                        7:00
+                    </label>
+                    <input class="btn-check" type="radio" name="time" id="evening8">
+                    <label class=" btn btn-outline-primary" for="evening8">
+                        8:00
+                    </label>
+                </div>
+            </div>
+
+            <script>
+                const slotBtn = document.getElementsByClassName("slot");
+                const slotGroup = document.getElementsByClassName("slot-group");
+
+                for (let i = 0; i < slotBtn.length; i++) {
+                    slotBtn[i].addEventListener("click", handleSlotChange);
+                }
+
+                function handleSlotChange(e) {
+                    e.preventDefault();
+
+                    if(e.target.id === "Morning"){
+                        document.getElementById("Morning-slot").classList.remove("d-none");
+                        document.getElementById("Afternoon-slot").classList.add("d-none");
+                        document.getElementById("Evening-slot").classList.add("d-none");
+                    }
+                    else if(e.target.id === "Afternoon"){
+                        document.getElementById("Morning-slot").classList.add("d-none");
+                        document.getElementById("Afternoon-slot").classList.remove("d-none");
+                        document.getElementById("Evening-slot").classList.add("d-none");
+                    }
+                    else if(e.target.id === "Evening"){
+                        document.getElementById("Morning-slot").classList.add("d-none");
+                        document.getElementById("Afternoon-slot").classList.add("d-none");
+                        document.getElementById("Evening-slot").classList.remove("d-none");
+                    }
+                }
+            </script>
         </div>
 
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
