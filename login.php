@@ -1,3 +1,26 @@
+<?php
+include('connection.php');
+if(isset($_POST['submit'])){
+    session_start();
+    $name = $_POST['name'];
+    $pass = $_POST['pass'];
+    $pass_de = md5($password);
+    echo $pass_de;
+    $sql = "SELECT * FROM accounts WHERE `name`='$name' AND pass='$pass_de'";
+		$result = mysqli_query($conn, $sql);
+		if ($result->num_rows > 0) {
+            $row = mysqli_fetch_assoc($result);
+            $_SESSION['name'] = $row['name'];
+            $_SESSION['type'] = $row['type'];
+            header('location:admin.php');
+        
+        }
+        else{
+            echo 'nppppp';
+        }
+   
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,46 +35,21 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="56" width="144" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skill">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Booking</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
     <section class="form">
         <div class="contents">
             <div class="content">
                 <h1 class="text-center" >Login</h1>
-                <form action="" class="d-flex flex-column justify-content-center align-items-spacebetween">
+                <form action="login.php" method="POST" class="d-flex flex-column justify-content-center align-items-spacebetween">
                     <div class="form-group ">
-                        <input id="name" name="email" type="email" required>
-                        <label  for="name">Email</label>
+                        <input id="name" name="name" type="text" required>
+                        <label  for="name">Name</label>
                     </div>
                     <div class="form-group">
                         <input id="name" name="pass" type="password" required>
                         <label for="name">Password</label>
                     </div>
-                    <p>Not a member?<a href="registration.html" class="btn btn-link">Create now</a></p>
-                    <input class="btn btn-outline-primary" type="submit" value="Registration">
+                    <input class="btn btn-outline-primary" type="submit" name="submit" value="Login">
                 </form>
             </div>
             <div class="content-text">

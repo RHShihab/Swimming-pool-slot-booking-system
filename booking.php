@@ -1,3 +1,22 @@
+<?php
+include ('connection.php');
+    if(isset($_POST['submit'])){
+        $name = $_POST['name']; 
+        $sid = $_POST['sid']; 
+        $date = $_POST['date']; 
+        $time = $_POST['time']; 
+        $sql="INSERT INTO bookings (`name`, `sid`, `time`, `date`) VALUES ('$name', '$sid', '$time', '$date')";
+
+    if (mysqli_query($conn, $sql)) {
+      header('location:confirmation.php');
+
+    } else {
+      echo "<script>alert('Error: '.$sql.'<br>' . mysqli_error($conn))</script>" ;
+    }
+    
+    $conn->close();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +32,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+<?php include('adminNav.php');?>
+<nav class="navbar navbar-expand-lg bg-light">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="56" width="144" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -23,145 +43,145 @@
             <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home </a>
+                        <a class="nav-link" href="index.php">Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skill">About</a>
+                        <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Booking</a>
+                        <a class="nav-link" href="booking.php">Booking</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="query.php">Query</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <section>
-        <div class="book-slot text-center">
-
-            <div class="form-check row row-cols-1 row-cols-md-3 g4" id="slot-list">
-                <input class="btn-check slot" type="radio" name="Slot" id="Morning">
-                <label class=" btn btn-outline-primary" for="Morning">
-                    Morning Slot
-                </label>
-                <input class="btn-check slot" type="radio" name="Slot" id="Afternoon">
-                <label class=" btn btn-outline-primary" for="Afternoon">
-                    Afternoon Slot
-                </label>
-                <input class="btn-check slot" type="radio" name="Slot" id="Evening">
-                <label class=" btn btn-outline-primary" for="Evening">
-                    Evening Slot
-                </label>
-            </div>
-
-            <div class="slot-group d-none" id="Morning-slot">
-                <h1>Morning Slot</h1>
-                <div class="form-check row row-cols-1 row-cols-md-4 g-4">
-                    <input class="btn-check" type="radio" name="time" id="morning6">
-                    <label class=" btn btn-outline-primary" for="morning6">
-                        6:00
-                    </label>
-                    <input class="btn-check" type="radio" name="time" id="morning7">
-                    <label class=" btn btn-outline-primary" for="morning7">
-                        7:00
-                    </label>
-                    <input class="btn-check" type="radio" name="time" id="morning8">
-                    <label class=" btn btn-outline-primary" for="morning8">
-                        8:00
-                    </label>
-                    <input class="btn-check" type="radio" name="time" id="morning9">
-                    <label class=" btn btn-outline-primary" for="morning9">
-                        9:00
-                    </label>
-                    <input class="btn-check" type="radio" name="time" id="morning10">
-                    <label class=" btn btn-outline-primary" for="morning10">
-                        10:00
-                    </label>
-                    <input class="btn-check" type="radio" name="time" id="morning11">
-                    <label class=" btn btn-outline-primary" for="morning11">
-                        11:00
-                    </label>
+        <h1 class="m-5 text-center">Book Your Swimming Schedule Now!!</h1>
+        <form class="container d-flex flex-column" action="booking.php" method="post">
+            <div class="d-flex flex-column align-items-center" >
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="id" class="form-label">Student Id</label>
+                    <input type="number" name="sid" class="form-control" id="id" required>
+                </div>
+                <div>
+                    <!-- another way of doing -->
+                    <!-- <h3>Booking For : 
+                 <?php 
+                 //   $date = date("Y/m/d");
+                   // $newdate = date("Y-m-d",strtotime ( '+1 day' , strtotime ( $date ) )) ;
+                   // echo $newdate;
+                    ?> 
+                    </h3>  -->
+                    <input class="btn btn-primary mb-3" type="date" name="date" id="date" required>
                 </div>
             </div>
+            <div class="book-slot text-center">
 
-            <div class="slot-group d-none" id="Afternoon-slot">
-                <h1>Afternoon Slot</h1>
-                <div class="form-check row row-cols-1 row-cols-md-4 g-4">
-                    <input class="btn-check" type="radio" name="time" id="afternoon1">
-                    <label class=" btn btn-outline-primary" for="afternoon1">
-                        1:00
+                <div class="form-check row row-cols-1 row-cols-md-4 g5 gx-5 gy-2" id="slot-list">
+                    
+                    <input class="slot btn-check" type="radio"  name="Slot" id="Morning" >
+                    <label class=" btn btn-outline-primary" value="Morning" name="slots" for="Morning">
+                        Morning Slot
                     </label>
-                    <input class="btn-check" type="radio" name="time" id="afternoon2">
-                    <label class=" btn btn-outline-primary" for="afternoon2">
-                        2:00
+                    <input class="btn-check slot" type="radio" value="Afternoon" name="Slot" id="Afternoon">
+                    <label class=" btn btn-outline-primary"  value="Afternoon" name="slots"  for="Afternoon">
+                        Afternoon Slot
                     </label>
-                    <input class="btn-check" type="radio" name="time" id="afternoon3">
-                    <label class=" btn btn-outline-primary" for="afternoon3">
-                        3:00
-                    </label>
-                    <input class="btn-check" type="radio" name="time" id="afternoon4">
-                    <label class=" btn btn-outline-primary" for="afternoon4">
-                        4:00
-                    </label>
-                    <input class="btn-check" type="radio" name="time" id="afternoon5">
-                    <label class=" btn btn-outline-primary" for="afternoon5">
-                        5:00
+                    <input class="btn-check slot" type="radio" value="Evening" name="Slot" id="Evening">
+                    <label class=" btn btn-outline-primary"  value="Evening" name="slots"  for="Evening">
+                        Evening Slot
                     </label>
                 </div>
-            </div>
 
-            <div class="slot-group d-none" id="Evening-slot">
-                <h1>Evening Slot</h1>
-                <div class="form-check row row-cols-1 row-cols-md-4 g-4">
-                    <input class="btn-check" type="radio" name="time" id="evening6">
-                    <label class=" btn btn-outline-primary" for="evening6">
-                        6:00
-                    </label>
-                    <input class="btn-check" type="radio" name="time" id="evening7">
-                    <label class=" btn btn-outline-primary" for="evening7">
-                        7:00
-                    </label>
-                    <input class="btn-check" type="radio" name="time" id="evening8">
-                    <label class=" btn btn-outline-primary" for="evening8">
-                        8:00
-                    </label>
+                <div class="slot-group d-none" id="Morning-slot">
+                    <h3 class="m-3">Morning Slot</h3>
+                    <div class="form-check row row-cols-1 row-cols-md-4 g-4">
+                        <input class="btn-check" type="radio" value="06:00 am" name="time" id="morning6">
+                        <label class=" btn btn-outline-primary" for="morning6">
+                            6:00 am
+                        </label>
+                        <input class="btn-check" type="radio" value="07:00 am" name="time" id="morning7">
+                        <label class=" btn btn-outline-primary" for="morning7">
+                            7:00 am
+                        </label>
+                        <input class="btn-check" type="radio" value="08:00 am" name="time" id="morning8">
+                        <label class=" btn btn-outline-primary" for="morning8">
+                            8:00 am
+                        </label>
+                        <input class="btn-check" type="radio" value="09:00 am" name="time" id="morning9">
+                        <label class=" btn btn-outline-primary" for="morning9">
+                            9:00 am
+                        </label>
+                        <input class="btn-check" type="radio" value="10:00 am" name="time" id="morning10">
+                        <label class=" btn btn-outline-primary" for="morning10">
+                            10:00 am
+                        </label>
+                        <input class="btn-check" type="radio" value="11:00 am" name="time" id="morning11">
+                        <label class=" btn btn-outline-primary" for="morning11">
+                            11:00 am
+                        </label>
+                    </div>
                 </div>
-            </div>
 
-            <script>
-                const slotBtn = document.getElementsByClassName("slot");
-                const slotGroup = document.getElementsByClassName("slot-group");
+                <div class="slot-group d-none" id="Afternoon-slot">
+                    <h3 class="m-3">Afternoon Slot</h3>
+                    <div class="form-check row row-cols-1 row-cols-md-4 g-4">
+                        <input class="btn-check" type="radio" name="time" value="01:00 pm" id="afternoon1">
+                        <label class=" btn btn-outline-primary" for="afternoon1">
+                            1:00 pm
+                        </label>
+                        <input class="btn-check" type="radio" name="time" value="02:00 pm" id="afternoon2">
+                        <label class=" btn btn-outline-primary" for="afternoon2">
+                            2:00 pm
+                        </label>
+                        <input class="btn-check" type="radio" name="time" value="03:00 pm" id="afternoon3">
+                        <label class=" btn btn-outline-primary" for="afternoon3">
+                            3:00 pm
+                        </label>
+                        <input class="btn-check" type="radio" name="time" value="04:00 pm" id="afternoon4">
+                        <label class=" btn btn-outline-primary" for="afternoon4">
+                            4:00 pm
+                        </label>
+                        <input class="btn-check" type="radio" name="time" value="05:00 pm" id="afternoon5">
+                        <label class=" btn btn-outline-primary" for="afternoon5">
+                            5:00 pm
+                        </label>
+                    </div>
+                </div>
 
-                for (let i = 0; i < slotBtn.length; i++) {
-                    slotBtn[i].addEventListener("click", handleSlotChange);
-                }
+                <div class="slot-group d-none" id="Evening-slot">
+                    <h3 class="m-3">Evening Slot</h3>
+                    <div class="form-check row row-cols-1 row-cols-md-4 g-4">
+                        <input class="btn-check" type="radio" name="time" value="06:00 pm" id="evening6">
+                        <label class=" btn btn-outline-primary" for="evening6">
+                            6:00 pm
+                        </label>
+                        <input class="btn-check" type="radio" name="time" value="07:00 pm" id="evening7">
+                        <label class=" btn btn-outline-primary" for="evening7">
+                            7:00 pm
+                        </label>
+                        <input class="btn-check" type="radio" name="time" value="08:00 pm" id="evening8">
+                        <label class=" btn btn-outline-primary" for="evening8">
+                            8:00 pm
+                        </label>
+                    </div>
+                </div>
 
-                function handleSlotChange(e) {
-                    e.preventDefault();
 
-                    if(e.target.id === "Morning"){
-                        document.getElementById("Morning-slot").classList.remove("d-none");
-                        document.getElementById("Afternoon-slot").classList.add("d-none");
-                        document.getElementById("Evening-slot").classList.add("d-none");
-                    }
-                    else if(e.target.id === "Afternoon"){
-                        document.getElementById("Morning-slot").classList.add("d-none");
-                        document.getElementById("Afternoon-slot").classList.remove("d-none");
-                        document.getElementById("Evening-slot").classList.add("d-none");
-                    }
-                    else if(e.target.id === "Evening"){
-                        document.getElementById("Morning-slot").classList.add("d-none");
-                        document.getElementById("Afternoon-slot").classList.add("d-none");
-                        document.getElementById("Evening-slot").classList.remove("d-none");
-                    }
-                }
-            </script>
-        </div>
+            </div >
+            
+             <input class="btn btn-dark m-5 disabled" name="submit" type="submit" id="book"  value="Book">
+        </form>
 
     </section>
-
+    <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

@@ -15,7 +15,7 @@
 
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="56" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="56" width="144" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,16 +23,16 @@
             <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home </a>
+                        <a class="nav-link" href="index.php">Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skill">About</a>
+                        <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Booking</a>
+                        <a class="nav-link" href="booking.php">Booking</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="query.php">Query</a>
                     </li>
                 </ul>
             </div>
@@ -51,21 +51,21 @@
                 </div>
                 <div class="carousel-inner ">
                     <div class="carousel-item active">
-                        <img class="carousel-image" src="img/1.jpg" class="d-block w-100" alt="...">
+                        <img src="img/1.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>First slide label</h5>
                             <p>Some representative placeholder content for the first slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="carousel-image" src="img/2.jpg" class="d-block w-100" alt="...">
+                        <img src="img/2.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Second slide label</h5>
                             <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="carousel-image" src="img/3.jpg" class="d-block w-100" alt="...">
+                        <img src="img/3.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Third slide label</h5>
                             <p>Some representative placeholder content for the third slide.</p>
