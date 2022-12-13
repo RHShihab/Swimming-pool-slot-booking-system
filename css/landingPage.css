@@ -10,7 +10,7 @@ section {
 }
 #about {
   min-height: fit-content;
-  background: #002e66;
+  background: #7eb8ff;
 }
 .section-padding {
   padding: 100px 0;
@@ -155,4 +155,41 @@ section {
   --bs-btn-disabled-color: #000;
   --bs-btn-disabled-bg: #07d2ff;
   --bs-btn-disabled-border-color: #078bff;
+}
+
+.qform{
+  position: initial;
+  background-color: #7eb8ff;
+  padding: 6% 20%;
+  left: 20%;
+  right: 20%;
+  text-align: center;
+  border-radius: 3em;
+}
+.qform h1{
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.qform-group input{
+  text-align: center;
+  border: none;
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  border-radius: 2em;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight:600;
+}
+
+.qform .btn input{
+  padding: 14px 30px;
+  margin: 10px 0px;
+  background-color: #ffffff;
+  border-color: #fff;
+  font-size: 1.3rem;
+  font-weight: 300;
+  border-radius: 5em;
+  cursor: pointer;
 }
