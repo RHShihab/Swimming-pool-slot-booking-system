@@ -12,31 +12,8 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="56" width="144" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Home </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.php">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="booking.php">Booking</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="query.php">Query</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<?php include('adminNav.php');?>
+
     <section id="about">
         <div>
             <h1>About</h1>
