@@ -34,32 +34,12 @@ include ('connection.php');
 <body>
 <!-- Background image -->
 <div class="bg-image opacity-75"
-     style="background-image: url('https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg'); height: 100vh ;">
+     style="background-image: url('img/bgimg.jpg'); height: 100vh ;">
 
 <!-- Background image -->
 <!--nav bar starts-->
 <?php include('adminNav.php');?>
 <!--nav bar ends-->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
-</head>
-
-<body>
-<!-- Background image -->
-<div class="bg-image opacity-75"
-     style="background-image: url('img/bgimg.jpg'); height: 100vh ;">
-
-<!-- Background image -->
 
       <div class="m-5 pb-5">
       </div>
@@ -80,13 +60,13 @@ include ('connection.php');
                     <div>
 
  <!-- another way of doing -->
-                    <!-- <h3>Booking For : 
+             <!-- <h3>Booking For : 
                  <?php 
                  //   $date = date("Y/m/d");
                    // $newdate = date("Y-m-d",strtotime ( '+1 day' , strtotime ( $date ) )) ;
                    // echo $newdate;
                     ?> 
-                    </h3>  -->                        
+                  </h3>  -->                        
 <input class="btn btn-primary mb-3" type="date" name="date" id="date" required>
                     </div>
                 </div>
@@ -184,13 +164,12 @@ include ('connection.php');
 
 
                 </div >
-              <div class='md-4'>
+                    <div class='md-4'>
                     <div class="d-grid gap-2 col-4 mx-auto">
                        <marquee>🏊</marquee>
 <input class="btn btn-primary" name="submit" type="submit" id="book"  value="Book">
-
                     </div>
-              </div>
+                    </div>
                
             </form>
            
