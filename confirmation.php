@@ -13,37 +13,14 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-light navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="56" width="144" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skill">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Booking</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+	<?php include('adminNav.php');?>
+    
     <section class="confirmation text-center">
-        <img class="w-50 img-fluid" src="img/book.png" alt="">
+        <img class="mt-5 h-50 img-fluid" src="img/book.png" alt="">
         <h6 class="text-primary">Booking Successful </h6>
         <p>Your reservation has been successfully booked.</p>
         <div class="w-50 p-5 bg-primary mx-auto">
-            <a class="btn btn-outline-light" href="index.html">Back to home</a>
+            <a class="btn btn-outline-light" href="index.php">Back to home</a>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>

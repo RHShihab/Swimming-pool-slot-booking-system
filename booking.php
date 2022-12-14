@@ -33,8 +33,15 @@ include ('connection.php');
 
 <body>
 <!-- Background image -->
-<div class="bg-image opacity-75"
-     style="background-image: url('img/bgimg.jpg'); height: 100vh ;">
+<!-- <div class="bg-image opacity-75"
+     style="background-image: url('img/bgimg.jpg');
+     min-height: 100vh;
+     min-width: 100%;"> -->
+     <img src="img/bgimg.jpg" alt="." class="bg-image opacity-75" style="background-image: url('img/bgimg.jpg');
+     min-height: 100vh;
+     min-width: 100%;
+     position: fixed;
+     z-index:-1;">
 
 <!-- Background image -->
 <!--nav bar starts-->
