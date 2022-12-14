@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<?php include('adminNav.php');?>
+<?php include('Nav.php');?>
 
     <section id="about">
         <div>

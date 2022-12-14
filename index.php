@@ -13,8 +13,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+<?php
+session_start();
 
-	<?php include('adminNav.php');?>
+                        if (isset($_SESSION['name'])) {
+							include('adminNav.php');
+                        }
+						else{
+							include('Nav.php');
+						}
+                    ?>
     
     <!--IUB Swimming Pool Photos Header starts-->
 	<section id="home">

@@ -13,7 +13,7 @@
 
 <body>
 
-	<?php include('adminNav.php');?>
+	<?php include('Nav.php');?>
     
     <section class="confirmation text-center">
         <img class="mt-5 h-50 img-fluid" src="img/book.png" alt="">

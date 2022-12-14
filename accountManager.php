@@ -12,7 +12,8 @@ else{
 
 
 include ('connection.php');
-    $sql = 'select * from accounts';
+    $email = $_SESSION['email'];
+    $sql = "select * from accounts where not  `email`='$email' ";
     $res = mysqli_query($conn,$sql);
 
 ?>
@@ -28,10 +29,12 @@ include ('connection.php');
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<?php include('adminNav.php');?>
+<?php 
+session_start();
+include('adminNav.php');?>
 
     <section class="list d-flex flex-column align-items-center justify-content-center">
-    <h1 class="mb-4"> Contact List</h1>
+    <h1 class="mb-4">Accounts List</h1>
     <a class="btn btn-primary" href="registration.php">Create an Admin Account</a>
     <table id="example" class="table table-striped ">
         <thead>
@@ -53,7 +56,7 @@ include ('connection.php');
                 <td>' .$rows["name"].'</td>
                 <td>' .$rows["email"].'</td>
                 <td>' .$rows["type"].'</td>
-                <td><a class="btn btn-danger" href='."contactdelete.php?id=".$id.'>Delete</a></td>
+                <td><a class="btn btn-danger" href='."deleteAccount.php?id=".$id.'>Delete</a></td>
 
             </tr>
                 ';

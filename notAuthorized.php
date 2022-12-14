@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+<?php include('adminNav.php');?>
     <h1>You are not authorized to access this page in image</h1>
+    
 </body>
 </html>

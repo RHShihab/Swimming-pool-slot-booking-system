@@ -34,10 +34,12 @@ echo $newdate;
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<?php include('adminNav.php');?>
+<?php 
+session_start();
+include('adminNav.php');?>
 
     <section class="list d-flex flex-column align-items-center justify-content-center">
-    <h1 class="mb-4"> Contact List</h1>
+    <h1 class="mb-4">Query List</h1>
 
     <table id="example" class="table table-striped ">
         <thead>

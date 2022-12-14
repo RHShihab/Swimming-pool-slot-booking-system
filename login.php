@@ -12,11 +12,12 @@ if(isset($_POST['submit'])){
             $row = mysqli_fetch_assoc($result);
             $_SESSION['name'] = $row['name'];
             $_SESSION['type'] = $row['type'];
+            $_SESSION['email'] = $row['email'];
             header('location:admin.php');
         
         }
         else{
-            echo 'nppppp';
+            echo "<script>alert('Wrong credentials')</script>" ;
         }
    
 }
@@ -35,7 +36,7 @@ if(isset($_POST['submit'])){
 </head>
 
 <body>
-<?php //include('adminNav.php');?>
+<?php include('adminNav.php');?>
     <section class="form">
         <div class="contents">
             <div class="content">

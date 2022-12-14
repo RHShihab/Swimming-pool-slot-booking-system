@@ -19,17 +19,6 @@
 					<li class="nav-item">
 						<a class="nav-link" href="booking.php">Book A Slot</a>
 					</li>
-                    <?php
-                        if (isset($_SESSION['name'])) {
-                            echo '<li class="nav-item">
-                            <a class="nav-link" href="admin.php">Admin Panel</a>
-                        </li>';
-                            echo '<li class="nav-item">
-                            <a class="nav-link btn btn-secondary" href="logout.php">Log Out</a>
-                        </li>';
-                        }
-                    ?>
-					
 				</ul>
 			</div>
 		</div>

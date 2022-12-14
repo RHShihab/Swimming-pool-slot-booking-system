@@ -60,10 +60,9 @@
 }
 
 .form {
-  margin-top: 82px;
   background: linear-gradient(rgba(90, 192, 255, 0.45), rgba(0, 132, 255, 0.45)),
     url(back.webp);
-  min-height: 100vh;
+  min-height: calc(100vh - 24px);
   background-repeat: no-repeat;
   background-size: cover;
 }

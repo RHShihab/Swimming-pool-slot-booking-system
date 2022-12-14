@@ -45,7 +45,15 @@ include ('connection.php');
 
 <!-- Background image -->
 <!--nav bar starts-->
-<?php include('adminNav.php');?>
+<?php
+session_start();
+                        if (isset($_SESSION['name'])) {
+							include('adminNav.php');
+                        }
+						else{
+							include('Nav.php');
+						}
+                    ?>
 <!--nav bar ends-->
 
       <div class="m-5 pb-5">
