@@ -61,7 +61,7 @@ echo $newdate;
                 <td>' .$rows["email"].'</td>
                 <td>' .$rows["subject"].'</td>
                 <td>' .$rows["message"].'</td>
-                <td><a class="btn btn-danger" href='."contactdelete.php?id=".$id.'>Delete</a></td>
+                <td><a class="btn btn-danger" href='."deleteQuery.php?id=".$id.'>Delete</a></td>
 
             </tr>
                 ';

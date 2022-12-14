@@ -64,15 +64,15 @@ include ('connection.php');
                     </div>
                     <div class="m-2">
                     <h6 class="text-white">Account Type</h6>
-                    <select name="type" id="type">
+                    <select class="form-select" name="type" id="type" style="margin-bottom:20px;">
 
-                        <option value="">--- Choose a Type ---</option>
+                        <option value="">Choose a Type</option>
                         <option value="Booking Manager">Booking Manager</option>
                         <option value="Manager">Manager</option>
                         <option value="Query Manager">Query Manager</option>
                     </select>
                     </div>
-                    <input class="btn btn-outline-primary" name="submit" type="submit" value="Registration">
+                    <input class="btn btn-outline-primary" name="submit" type="submit" value="Register" style="width: 50%; margin:auto;">
                 </form>
             </div>
             <div class="content-text">

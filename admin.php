@@ -21,7 +21,7 @@ if (!isset($_SESSION['name'])) {
 
 <body>
 <?php include('adminNav.php');?>
-    <section>
+    <section style="margin-top: 80px;">
       <div class="text-center m-5">
         <h2>Bookings</h2>
 

@@ -4,7 +4,7 @@ if(isset($_POST['submit'])){
     session_start();
     $name = $_POST['name'];
     $pass = $_POST['pass'];
-    $pass_de = md5($password);
+    $pass_de = md5($pass);
     echo $pass_de;
     $sql = "SELECT * FROM accounts WHERE `name`='$name' AND pass='$pass_de'";
 		$result = mysqli_query($conn, $sql);
@@ -35,11 +35,11 @@ if(isset($_POST['submit'])){
 </head>
 
 <body>
-
+<?php //include('adminNav.php');?>
     <section class="form">
         <div class="contents">
             <div class="content">
-                <h1 class="text-center" >Login</h1>
+                <h1 class="text-center" style="color: white;">Login</h1>
                 <form action="login.php" method="POST" class="d-flex flex-column justify-content-center align-items-spacebetween">
                     <div class="form-group ">
                         <input id="name" name="name" type="text" required>
