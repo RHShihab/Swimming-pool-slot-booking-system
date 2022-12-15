@@ -12,3 +12,32 @@
 - [1730894](https://github.com/fauziahossain) - Fauzia Hossain
 
 <hr>
+
+## Screenshots of the page:
+
+If the images are not visible, please navigate to [/screenshots](https://github.com/RHShihab/Swimming-pool-slot-booking-system) folder
+
+### All user
+
+Home page:
+![](screenshots/homepage.png)
+
+Booking a slot:
+![](screenshots/booking.png)
+
+### Admin
+
+Log in:
+![](screenshots/admin-login.png)
+
+Dashboard:
+![](screenshots/admin-dashboard.png)
+
+Booking list:
+![](screenshots/admin-booking-list.png)
+
+Query list:
+![](screenshots/admin-query-list.png)
+
+Account list:
+![](screenshots/admin-account-list.png)
